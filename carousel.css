@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.carousel [role='list'] {
+  padding: 0;
+  list-style: none;
+}
+.carousel-scroll-container {
+  /* Enable horizontal scrolling */
+  overflow-x: auto;
+  overflow-y: hidden;
+  /* Enable horizontal scroll snap */
+  scroll-snap-type: x proximity;
+  /* Smoothly snap from one focal point to another */
+  scroll-behavior: smooth;
+}
+.carousel-media {
+  /* Arrange media horizontally */
+  display: flex;
+}
+.carousel-media img {
+  /* Arrange media horizontally */
+  display: flex;
+  margin-right: 20px;
+  max-height: 330px;
+}
+.carousel-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Limit the height of each media item */
+  height: auto;
+  /* Prevent media from shrinking */
+  flex-shrink: 0;
+  /* The focal point for each item is the center */
+  scroll-snap-align: center;
+}
+.carousel-item:first-of-type {
+  /* Allow users to fully scroll to the start */
+  scroll-snap-align: start;
+}
+.carousel-item:last-of-type {
+  /* Allow users to fully scroll to the end */
+  scroll-snap-align: end;
+}
+.carousel-item > *,
+.carousel-item :is(picture, figcaption, figure, img) {
+  height: 100%;
+}
+.carousel-item img {
+  /* Remove line height (typically done in a CSS reset) */
+  display: block;
+  /* Responsive width based on aspect ratio */
+  width: auto;
+  max-height: 300px;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+.carousel-arrow-left {
+  left: 0;
+}
+
+.carousel-arrow-right {
+  right: 0;
+}
+
+.carousel {
+  position: relative;
+}
+.carousel-control {
+  --offset-x: 0;
+  cursor: pointer;
+  /* Anchor the controls relative to the outer wrapper */
+  position: absolute;
+  /* Center the controls vertically */
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* Don't allow icons to be event targets */
+.carousel-control * {
+  pointer-events: none;
+}
+.carousel-control[data-direction="start"] {
+  /* Same as left in LTR and right in RTL */
+  inset-inline-start: var(--offset-x);
+}
+.carousel-control[data-direction="end"] {
+  /* Same as right in LTR and left in RTL */
+  inset-inline-end: var(--offset-x);
+}
+.carousel-control[aria-disabled='true'] {
+  filter: opacity(0.5);
+  cursor: not-allowed;
+}
+
+figcaption{
+  text-align: center;
+}

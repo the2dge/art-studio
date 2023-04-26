@@ -290,3 +290,45 @@ body, html {
     width: 60px;
     height: 60px;
 }
+
+/* this media query is to support smaller screen */
+@media screen and (max-width: 600px) {
+  .gallery_boxes {
+    flex-direction: column;
+  }
+
+  .gallery_box,
+  .gallery_box2 {
+    width: 100%;
+  }
+
+  .footer h1 {
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 20px;
+    font-size: 16px;
+    top: 16px;
+    left: 64px;
+  }
+
+  .welcome h1 {
+    font-size: 28px;
+  }
+
+  .welcome h2 {
+    font-size: 20px;
+  }
+
+  .welcome p {
+    font-size: 14px;
+  }
+
+  .CTA_container h1 {
+    font-size: 24px;
+  }
+
+  .CTA_container p {
+    font-size: 16px;
+  }
+}
+

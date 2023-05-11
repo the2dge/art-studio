@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="carousel.css">
+</head>
+<body>
+   <header id="navbar">
+    <nav class="navbar-container container">
+    <a href="./index.html" class="home-link">
+      <img src='sun.svg'>MAGIC COLOR
+    </a>
+    <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" aria-expanded="false">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <div id="navbar-menu" aria-labelledby="navbar-toggle">
+      <ol class="navbar-links">
+        <li class="navbar-item"><a class="navbar-link" href="/about">About</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="/blog">Gallery</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="/careers">Blog</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="/contact">Contact</a></li>
+      </ol>
+    </div>
+  </nav>
+</header>
+
+<div class="feedback-card">
+<form id="feedback-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="rating">Rating (1-5):</label>
+        <input type="number" id="rating" name="rating" min="1" max="5" required><br><br>
+
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="4" cols="50" required></textarea><br><br>
+
+        <button type="submit">Submit Feedback</button>
+    </form>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="feedback.js"></script>
+</body>
+</html>

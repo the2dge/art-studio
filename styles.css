@@ -332,3 +332,10 @@ body, html {
   }
 }
 
+.feedback-card{
+  position: absolute;
+  top: 100px;
+  width: 430px;
+  padding: 10px;
+  background-color: gray;
+}
